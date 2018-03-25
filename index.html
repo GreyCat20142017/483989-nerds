@@ -3,9 +3,9 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Nёrds. Дизайн-студия из Краснодара</title>
-		<!-- <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
 		<link rel="stylesheet" href="css/normalize.css">
-		<link rel="stylesheet" href="css/style.css"> -->
+		<link rel="stylesheet" href="css/style.css">
 	</head>
 
 	<body>
@@ -30,9 +30,9 @@
 
 			<section class="slider layout">
 				<h2 class="visually-hidden">Слайдер</h2>
-				<input class="slider-radio visually-hidden" type="radio" id="id-slide-1" name="slider-radio" title="Слайд-1" tabindex="-1" checked> 
-				<input class="slider-radio visually-hidden" type="radio" id="id-slide-2" name="slider-radio" title="Слайд-2" tabindex="-1"> 
-				<input class="slider-radio visually-hidden" type="radio" id="id-slide-3" name="slider-radio" title="Слайд-3" tabindex="-1"> 
+				<input class="slider-radio visually-hidden" type="radio" id="id-slide-1" name="slider-radio" title="Слайд-1" checked> 
+				<input class="slider-radio visually-hidden" type="radio" id="id-slide-2" name="slider-radio" title="Слайд-2"> 
+				<input class="slider-radio visually-hidden" type="radio" id="id-slide-3" name="slider-radio" title="Слайд-3"> 
 				<div class="slider-controls">
 					<label class="slider-button slider-button-1" for="id-slide-1" title="Слайд-1"><span class="visually-hidden">Слайд-1</span></label>
 					<label class="slider-button slider-button-2" for="id-slide-2" title="Слайд-2"><span class="visually-hidden">Слайд-2</span></label>
@@ -101,16 +101,16 @@
 			<h2 class="visually-hidden">Наши преимущества</h2>
 
 			<div class="advantage-orders common-wrapper">
-				<h3 class="orders-title">Выполняем заказы на разработку:</h3>
-				<ul class="orders-categories">
-					<li class="orders-category">Веб-сайтов любой сложности</li>
-					<li class="orders-category">Мобильных приложений для iOS и Android</li>
-					<li class="orders-category">Слайдшоу и видео для корпоративных презентаций</li>
+				<h3 class="advantage-orders-title">Выполняем заказы на разработку:</h3>
+				<ul class="advantage-order-types">
+					<li class="advantage-order-type">Веб-сайтов любой сложности</li>
+					<li class="advantage-order-type">Мобильных приложений для iOS и Android</li>
+					<li class="advantage-order-type">Слайдшоу и видео для корпоративных презентаций</li>
 				</ul>
 			</div>
 
 			<table class="advantage-details">
-				<caption class="advantage-title">С 2004 года любим точность во всем:</caption>
+				<caption class="advantage-details-title">С 2004 года любим точность во всем:</caption>
 				<tr>
 					<td>146<sup>%</sup></td>
 					<td>100<sup>%</sup></td>
@@ -132,16 +132,24 @@
 			<h2 class="visually-hidden">Лучшие проекты для наших заказчиков</h2>
 			<ul class="brand-items">
 				<li class="brand-item">
-					<a class="brand-link" href="https://htmlacademy.ru/intensive/htmlcss" title="HTML Academy"><img class="brand-img" src="img/brand/logo-1.png" width="260" height="180" alt="HTML Academy"></a>
+					<a class="brand-link" href="https://htmlacademy.ru/intensive/htmlcss" title="HTML Academy">
+						<img class="brand-img" src="img/brand/logo-1.png" width="260" height="180" alt="HTML Academy">
+					</a>
 				</li>
 				<li class="brand-item">
-					<a class="brand-link" href="#" title="Barbershop"><img class="brand-img" src="img/brand/logo-2.png" width="209" height="90" alt="Barbershop Borodinski"></a>
+					<a class="brand-link" href="#" title="Barbershop">
+						<img class="brand-img" src="img/brand/logo-2.png" width="209" height="90" alt="Barbershop Borodinski">
+					</a>
 				</li>
 				<li class="brand-item">
-					<a class="brand-link" href="#" title="PINK"><img class="brand-img" src="img/brand/logo-3.png" width="185" height="52" alt="PINK"></a>
+					<a class="brand-link" href="#" title="PINK">
+						<img class="brand-img" src="img/brand/logo-3.png" width="185" height="52" alt="PINK">
+					</a>
 				</li>
 				<li class="brand-item">
-					<a class="brand-link" href="#" title="MISHKA"><img class="brand-img" src="img/brand/logo-4.png" width="260" height="180" alt="MISHKA"></a>
+					<a class="brand-link" href="#" title="MISHKA">
+						<img class="brand-img" src="img/brand/logo-4.png" width="260" height="180" alt="MISHKA">
+					</a>
 				</li>
 			</ul>
 			
@@ -160,7 +168,7 @@
 					<a class="map-button btn btn-red" href="feedback.html">Напишите нам</a>
 				</div>		
 			</div>
-			<img class="map-image" src="img/map.jpg" width="1440" height="416" alt="Карта"> 
+			<img class="map-image" src="img/map.jpg" width="1440" height="416" alt="Карта" title="Адрес на карте: 191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"> 
 		</section>
 
 		<footer class="footer layout">
@@ -176,7 +184,7 @@
 			</div>	
 		</footer>
 
-		<form class="form-feedback flex-hide" id="id-form-feedback" method="post" action="https://echo.htmlacademy.ru">
+		<form class="form-feedback flex-hide"  method="post" action="https://echo.htmlacademy.ru">
 			<h2 class="form-feedback-title">Напишите нам</h2>
 			<button class="feedback-close" type="button" name="close-button" id="id-feedback-close" title="Закрыть форму обратной связи">
 				<span class="visually-hidden">Закрыть</span>
@@ -195,6 +203,7 @@
 			</div>
 			<button class="form-feedback-button btn btn-red" type="submit" title="Отправить сообщение">Отправить</button>
 		</form>
+
 		<!-- <script src="js/script.js"></script> -->
 	</body>
 </html>

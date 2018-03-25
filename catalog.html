@@ -3,9 +3,9 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Магазин готовых шаблонов Nёrds</title>
-		<!--<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
-		<link rel="stylesheet" href="css/normalize.css">
-		<link rel="stylesheet" href="css/style.css"> -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+		<link href="css/normalize.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet"> 
 	</head>
 
 	<body>
@@ -13,7 +13,7 @@
 		<header class="inner-header">
 			<nav class="navigation layout">
 				<a class="navigation-logo" href="index.html" title="Перейти на главную страницу">
-					<img class="navigation-logo-img"  src="img/nerds-logo.svg" width="160" height="65" alt="Логотип Nerds">
+					<img class="navigation-logo-img" src="img/nerds-logo.svg" width="160" height="65" alt="Логотип Nerds">
 				</a>		 	 		
 				<ul class="common-menu menu">
 					<li class="common-menu-item"><a class="common-menu-link menu-link" href="#">Студия</a></li>
@@ -61,15 +61,15 @@
 					<legend class="fieldset-legend">Сетка:</legend>					
 					<ul class="filter-options">
 						<li class="filter-option">						
-							<input class="filter-radio visually-hidden" type="radio" id="id-radio-1" name="grid" checked>
+							<input class="filter-radio visually-hidden" type="radio" id="id-radio-1" name="grid" title="Адаптивная" checked>
 							<label for="id-radio-1">Адаптивная</label>
 						</li>				
 						<li class="filter-option">						
-							<input class="filter-radio visually-hidden" type="radio" id="id-radio-2" name="grid">
+							<input class="filter-radio visually-hidden" type="radio" id="id-radio-2" name="grid" title="Фиксированная">
 							<label for="id-radio-2">Фиксированная</label>
 						</li>				
 						<li class="filter-option">						
-							<input  class="filter-radio visually-hidden" type="radio" id="id-radio-3" name="grid">
+							<input  class="filter-radio visually-hidden" type="radio" id="id-radio-3" name="grid" title="Резиновая">
 							<label for="id-radio-3">Резиновая</label>
 						</li>															
 					</ul>					
@@ -79,23 +79,23 @@
 					<legend class="fieldset-legend">Особенности:</legend>				
 					<ul class="filter-options">
 						<li class="filter-option">						
-							<input class="filter-checkbox visually-hidden" type="checkbox" id="id-check-1" name="feature-1" checked>
+							<input class="filter-checkbox visually-hidden" type="checkbox" id="id-check-1" name="feature-1" title="Слайдер" checked>
 							<label for="id-check-1">Слайдер</label>
 						</li>				
 						<li class="filter-option">						
-							<input class="filter-checkbox visually-hidden" type="checkbox" id="id-check-2" name="feature-2">
+							<input class="filter-checkbox visually-hidden" type="checkbox" id="id-check-2" name="feature-2" title="Блок преимуществ">
 							<label for="id-check-2">Блок преимуществ</label>
 						</li>				
 						<li class="filter-option">						
-							<input  class="filter-checkbox visually-hidden" type="checkbox" id="id-check-3" name="feature-3" checked>
+							<input  class="filter-checkbox visually-hidden" type="checkbox" id="id-check-3" name="feature-3" title="Новости" checked>
 							<label for="id-check-3">Новости</label>
 						</li>				
 						<li class="filter-option">						
-							<input class="filter-checkbox visually-hidden" type="checkbox" id="id-check-4" name="feature-4">
+							<input class="filter-checkbox visually-hidden" type="checkbox" id="id-check-4" name="feature-4" title="Галерея">
 							<label for="id-check-4">Галерея</label>
 						</li>				
 						<li class="filter-option">						
-							<input class="filter-checkbox visually-hidden" type="checkbox" id="id-check-5" name="feature-5"  disabled>
+							<input class="filter-checkbox visually-hidden" type="checkbox" id="id-check-5" name="feature-5" title="Корзина" disabled>
 							<label for="id-check-5">Корзина</label>
 						</li>				
 					</ul>
@@ -121,59 +121,71 @@
 				<ul class="products" title="Элементы каталога">
 					<li class="product">		
 						<img class="product-image" src="img/catalog/img-sedona.jpg" width="360" height="576" alt="Седона">
-						<div class="product-info">
-							<a class="product-name" href="#" title="Перейти в окно товара">Sedona</a>		
+						<div class="product-info" >
+							<a class="product-name" href="sedona.html" title="Перейти в окно товара">Sedona</a>		
 							<p class="product-description">Информационный сайт<br> для туристов</p>
-							<a class="product-button btn btn-red" href="#" title="Купить"><span class="product-price">9900</span> <span class="product-currency">РУБ.</span></a>
+							<a class="product-button btn btn-red" href="#" title="Купить">
+								<span class="product-price">9900</span> <span class="product-currency">РУБ.</span>
+							</a>
 						</div>
 					</li>
 					<li class="product">		
 						<img class="product-image" src="img/catalog/img-pink.jpg" width="360" height="576" alt="Pink">
 						<div class="product-info">
-							<a class="product-name" href="#" title="Перейти в окно товара">Pink App</a>		
+							<a class="product-name" href="pink.html" title="Перейти в окно товара">Pink App</a>		
 							<p class="product-description">Продуктовый лендинг приложения для iOS и Android</p>
-							<a class="product-button btn btn-red" href="#" title="Купить"><span class="product-price">9900</span> <span class="product-currency">РУБ.</span></a>
+							<a class="product-button btn btn-red" href="#" title="Купить">
+								<span class="product-price">9900</span> <span class="product-currency">РУБ.</span>
+							</a>
 						</div>
 					</li>
-					<li class="product">		
+					<li class="product"> 
 						<img class="product-image" src="img/catalog/img-barbershop.jpg" width="360" height="576" alt="Barbershop">
 						<div class="product-info">
-							<a class="product-name" href="#" title="Перейти в окно товара">Barbershop</a>		
+							<a class="product-name" href="barbershop.html" title="Перейти в окно товара">Barbershop</a>		
 							<p class="product-description">Сайт салона красоты.<br> Для мужчин, да.</p>
-							<a class="product-button btn btn-red" href="#" title="Купить"><span class="product-price">9900</span> <span class="product-currency">РУБ.</span></a>
+							<a class="product-button btn btn-red" href="#" title="Купить">
+								<span class="product-price">9900</span> <span class="product-currency">РУБ.</span>
+							</a>
 						</div>
 					</li>
 					<li class="product">		
 						<img class="product-image" src="img/catalog/img-mishka.jpg" width="360" height="576" alt="Mishka">
 						<div class="product-info">
-							<a class="product-name" href="#" title="Перейти в окно товара">Mishka</a>		
+							<a class="product-name" href="mishka.html" title="Перейти в окно товара">Mishka</a>		
 							<p class="product-description">Интернет-магазин<br> вязаных игрушек</p>
-							<a class="product-button btn btn-red" href="#" title="Купить"><span class="product-price">9900</span> <span class="product-currency">РУБ.</span></a>
+							<a class="product-button btn btn-red" href="#" title="Купить">
+								<span class="product-price">9900</span> <span class="product-currency">РУБ.</span>
+							</a>
 						</div>
 					</li>
 					<li class="product">		
 						<img class="product-image" src="img/catalog/img-aplus.jpg" width="360" height="576" alt="A Plus">
 						<div class="product-info">
-							<a class="product-name" href="#" title="Перейти в окно товара">A Plus</a>		
+							<a class="product-name" href="aplus.html" title="Перейти в окно товара">A Plus</a>		
 							<p class="product-description">Лендинг курсов повышения квалификации</p>
-							<a class="product-button btn btn-red" href="#" title="Купить"><span class="product-price">9900</span> <span class="product-currency">РУБ.</span></a>
+							<a class="product-button btn btn-red" href="#" title="Купить">
+								<span class="product-price">9900</span><span class="product-currency">РУБ.</span>
+							</a>
 						</div>
 					</li>
 					<li class="product">		
 						<img class="product-image" src="img/catalog/img-kvast.jpg" width="360" height="576" alt="Кваст">
 						<div class="product-info">
-							<a class="product-name" href="#" title="Перейти в окно товара">Кваст</a>		
+							<a class="product-name" href="kvast.html" title="Перейти в окно товара">Кваст</a>		
 							<p class="product-description">Промо-сайт производителя крафтового кваса</p>
-							<a class="product-button btn btn-red" href="#" title="Купить"><span class="product-price">9900</span> <span class="product-currency">РУБ.</span></a>
+							<a class="product-button btn btn-red" href="#" title="Купить">
+								<span class="product-price">9900</span> <span class="product-currency">РУБ.</span>
+							</a>
 						</div>
 					</li>
 				</ul>
 
 				<ul class="pagination" title="Навигация по страницам">
-					<li><span class="pagination-link current" title="Текущая страница">1</span></li>
-					<li><a class="pagination-link" href="#" title="Страница №2">2</a></li>
-					<li><a class="pagination-link" href="#" title="Страница №3">3</a></li>
-					<li><a class="pagination-link next" href="#" title="Следующая страница">Следующая</a></li>
+					<li><a class="pagination-link btn btn-grey current" title="Текущая страница">1</a></li>
+					<li><a class="pagination-link btn btn-grey" href="#" title="Страница №2">2</a></li>
+					<li><a class="pagination-link btn btn-grey" href="#" title="Страница №3">3</a></li>
+					<li><a class="pagination-link btn btn-grey next" href="#" title="Следующая страница">Следующая</a></li>
 				</ul>	
 			</div>
 
@@ -190,7 +202,7 @@
 					<a class="map-button btn btn-red" href="feedback.html">Напишите нам</a>
 				</div>		
 			</div>
-			<img class="map-image" src="img/map.jpg" width="1440" height="416" alt="Карта"> 
+			<img class="map-image" src="img/map.jpg" width="1440" height="416" alt="Карта" title="Адрес на карте: 191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"> 
 		</section>
 
 
