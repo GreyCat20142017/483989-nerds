@@ -581,8 +581,7 @@ body {
   content: "";
   position: absolute;
   z-index: 1;
-  top: 6px;
-  box-sizing: content-box;
+  top: 6px;  
   width: 0;
   height: 0;
   border-right: 6px solid transparent;
@@ -992,9 +991,10 @@ body {
   right: 0;
   bottom: 0;
   width: 100%;
-  /*если изображение статичной карты не должно растягиваться до размеров вьюпорта*/
-  /*max-width: 1440px;
-  margin: 0 auto;*/
+  /* убрать этот блок - если изображение статичной карты должно растягиваться до размеров вьюпорта*/
+  max-width: 1440px;
+  margin: 0 auto;
+  /* убрать этот блок - конец*/
   height: 100%;
   background-color: rgb(213, 213, 213);
 }
