@@ -48,10 +48,10 @@
 
 					<div class="range-labels">
 						<label class="range-label" for="id-range-min">от 
-							<input class="range-input" type="text" id="id-range-min"  name="range-min" value="0">
+							<input class="range-input" type="text" id="id-range-min"  name="range-min" value="0" readonly>
 						</label>			 				
 						<label class="range-label" for="id-range-max">до
-							<input class="range-input" type="text" id="id-range-max"  name="range-max" value="15&nbsp;000">
+							<input class="range-input" type="text" id="id-range-max"  name="range-max" value="15&nbsp;000" readonly>
 						</label>	
 					</div>    				
 
@@ -218,6 +218,27 @@
 				<p class="footer-text">Скидка 10% для друзей из социальных сетей.</p>
 			</div>	
 		</footer>
+		
+		<form class="form-feedback flex-hide" id="id-form-feedback" method="post" action="https://echo.htmlacademy.ru"> 
+			<h2 class="form-feedback-title">Напишите нам</h2>
+			<button class="feedback-close" type="button" name="close-button" id="id-feedback-close" title="Закрыть форму обратной связи">
+				<span class="visually-hidden">Закрыть</span>
+			</button>
+			<div class="form-field">
+				<label class="form-label" for="id-feedback-name">Ваше имя:</label>
+				<input class="form-input" type="text" id="id-feedback-name" name="feedback-name" placeholder="Имя Фамилия" title="Введите Ваши имя и фамилию">
+			</div>
+			<div class="form-field">
+				<label class="form-label" for="id-feedback-email">Ваш e-mail:</label>
+				<input class="form-input" type="email" id="id-feedback-email" name="feedback-email" placeholder="email@example.com" title="Введите адрес электронной почты">		
+			</div>
+			<div class="form-field">
+				<label class="form-label" for="id-feedback-text">Текст письма:</label>
+				<textarea class="form-textarea" id="id-feedback-text" name="feedback-text" placeholder="В свободной форме" title="Введите текст Вашего сообщения"></textarea>
+			</div>
+			<button class="form-feedback-button btn btn-red" type="submit" title="Отправить сообщение">Отправить</button>
+		</form>
 
+		<script src="js/script.js"></script>
 	</body>
 </html>

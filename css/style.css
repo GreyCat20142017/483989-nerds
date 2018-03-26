@@ -170,8 +170,7 @@ body {
   min-height: 576px;
   margin: 40px 40px 33px 0;
   padding: 0;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  
 }
 
 .product::before {
@@ -183,7 +182,9 @@ body {
   left: 0;
   width: 360px;
   height: 40px;
-  background-color: rgb(255, 255, 255);
+  /*border-top-left-radius: 10px;
+  border-top-right-radius: 10px;*/
+  background-color: rgb(255, 255, 255); /*можно было бы подложить фон для имитации цвета svg, если бы круги в svg были не прозрачные, а белые*/
   background-image: url("../img/catalog/browser.svg");
   background-repeat: no-repeat;
   background-position: center center;
@@ -228,12 +229,13 @@ body {
   vertical-align: baseline;
   text-decoration: none;
   text-transform: uppercase;
-  color: rgb(0, 0, 0);
+  color: rgb(0, 0, 0);  
 }
 
 .product-description {
-  overflow-y: auto; /*для предотвращения переполнения по методике, рекомендованной в примерах переполнения*. Хотя у меня все растягивается, правда с искажением рисунка*/
+  overflow-y: auto; /*для предотвращения переполнения по методике, рекомендованной в примерах переполнения. Хотя у меня все растягивается, правда с искажением рисунка*/
   max-height: 300px;
+  max-width: 240px; /*Для IE*/
   margin: 0 0 26px;
   padding: 4px; /*чтобы в FireFox не появлялась полоса прокрутки в некоторых двухстрочных абзацах*/
   font-size: 16px;
@@ -726,28 +728,39 @@ body {
   width: 360px;
   margin-right: 40px;
   padding-right: 60px;
+  padding-top: 146px;
+  position: relative;
 }
 
+.category::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 146px; 
+  left: 0;
+  top: 0;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 .category:nth-child(3n) {
   margin-right: 0;
 }
 
-.category-image {
-  display: block;
-  min-height: 146px;
-}
-
-.category:nth-child(2n-1) .category-image {
+.category:nth-child(2n-1)::before {
   background-color: rgb(251, 85, 89);
+  background-image: url("../img/category/illustration-1.jpg");
 }
 
-.category:nth-child(2n)  .category-image {
+.category:nth-child(2n)::before {
   background-color: rgb(0, 203, 116);
+  background-image: url("../img/category/illustration-2.jpg");
 }
 
-.category:nth-child(3n)  .category-image {
+.category:nth-child(3n)::before {
   background-color: rgb(240, 202, 72);
+  background-image: url("../img/category/illustration-3.jpg");
 }
 
 .category-title {
@@ -790,7 +803,7 @@ body {
   margin: 34px 0;
   padding: 0;
   font-size: 45px;
-  font-weight: 500; /*PP*/
+  font-weight: 500;
   line-height: 45px;
 }
 
@@ -854,6 +867,7 @@ body {
   width: 120px;
   padding: 6px 2px 6px 0;
   font-size: 16px;
+  font-weight: 400;
   line-height: 18px;
   text-align: left;
   word-wrap: break-word;
@@ -910,6 +924,8 @@ body {
 }
 
 .brand-item {
+  display: flex;
+  height: 180px;
   margin-right: 40px;
 }
 
@@ -923,7 +939,6 @@ body {
   justify-content: center;
   align-items: center;
   width: 260px;
-  min-height: 180px;
   opacity: 0.2;
 }
 
@@ -950,9 +965,9 @@ body {
 }
 
 .brand-link:focus {
-  outline: none; 
+  outline: none;
   box-shadow: 0 0 1px 2px rgb(141, 165, 230);
-}  
+}
 
 .brand-link:hover::after,
 .brand-link:focus::after {
@@ -966,6 +981,7 @@ body {
 .brand-img {
   display: block;
 }
+
 
 .map {
   position: relative;
@@ -1243,33 +1259,44 @@ body {
 .form-input,
 .form-textarea {
   padding: 12px 14px;
+  font-family: inherit;
   font-size: 16px;
   line-height: 18px;
-  border: 2px solid rgba(215, 220, 222, 1);
+  border-width: 2px;
+  border-color:  rgba(215, 220, 222, 1);
+  border-style: solid;
   color: rgba(68, 68, 68, 0.5);
 }
 
 .form-input:hover,
 .form-textarea:hover {
-  border: 2px solid rgba(180, 185, 187, 1);
+  border-color: rgb(180, 185, 187);
   color: rgba(68, 68, 68, 0.5);
 }
 
 .form-input:focus,
 .form-textarea:focus {
-  border: 2px solid rgba(0, 0, 0, 1);
+  border-color: rgb(0, 0, 0); 
+  color: rgb(0, 0, 0);
   outline: none;
-  color: rgba(0, 0, 0, 1);
+  box-shadow: none;
 }
 
+.form-input:invalid,
+.form-textarea:invalid {
+  border-color: rgb(231, 66, 70);
+  color: rgb(231, 66, 70);
+  outline: none;
+  box-shadow: none;
+}
 
 .form-input::-webkit-input-placeholder,
 .form-textarea::-webkit-input-placeholder {
   color: rgba(68, 68, 68, 0.5);
 }
 
-.form-input:-ms-input-placeholder,
-.form-textarea:-ms-input-placeholder {
+.form-input::-ms-input-placeholder,
+.form-textarea::-ms-input-placeholder {
   color: rgba(68, 68, 68, 0.5);
 }
 
@@ -1278,11 +1305,6 @@ body {
   color: rgba(68, 68, 68, 0.5);
 }
 
-.form-input.invalid,
-.form-textarea.invalid {
-  border: 2px solid rgb(231, 66, 70);
-  color: rgb(231, 66, 70);
-}
 
 .form-input:focus::-webkit-input-placeholder,
 .form-textarea:focus::-webkit-input-placeholder {
@@ -1299,21 +1321,33 @@ body {
   color: rgb(0, 0, 0);
 }
 
-
-.form-input.invalid::-webkit-input-placeholder,
-.form-textarea.invalid:focus::-webkit-input-placeholder {
+.form-input:invalid::-webkit-input-placeholder,
+.form-textarea:invalid::-webkit-input-placeholder {
   color: rgb(231, 66, 70);
+  box-shadow: none;
 }
 
-.form-input.invalid::-ms-input-placeholder,
-.form-textarea.invalid:focus::-ms-input-placeholder {
-  color: rgb(231, 66, 70);
+.form-input:invalid::-ms-input-placeholder,
+.form-textarea:invalid::-ms-input-placeholder {
+    color: rgb(231, 66, 70);
 }
 
-.form-input.invalid::placeholder,
-.form-textarea.invalid:focus::placeholder {
-  color: rgb(231, 66, 70);
+.form-input:invalid::placeholder,
+.form-textarea:invalid::placeholder {
+    color: rgb(231, 66, 70);
 }
+
+
+.form-input:required,
+.form-textarea:required {
+    border-width: 2px;
+}
+
+
+
+
+
+
 
 
 .form-feedback-button {
