@@ -17,13 +17,13 @@
 					<img class="navigation-logo-img"  src="img/nerds-logo.svg" width="160" height="65" alt="Логотип Nerds">
 				</a>		 	 		
 				<ul class="common-menu menu">
-					<li class="common-menu-item"><a class="common-menu-link menu-link" href="#">Студия</a></li>
-					<li class="common-menu-item"><a class="common-menu-link menu-link" href="#">Клиенты</a></li>
-					<li class="common-menu-item"><a class="common-menu-link menu-link" href="catalog.html">Магазин</a></li>
-					<li class="common-menu-item"><a class="common-menu-link menu-link" href="#">Контакты</a></li>
+					<li class="common-menu-item menu-item"><a class="common-menu-link menu-link" href="#">Студия</a></li>
+					<li class="common-menu-item menu-item"><a class="common-menu-link menu-link" href="#">Клиенты</a></li>
+					<li class="common-menu-item menu-item"><a class="common-menu-link menu-link" href="catalog.html">Магазин</a></li>
+					<li class="common-menu-item menu-item"><a class="common-menu-link menu-link" href="#">Контакты</a></li>
 				</ul>
 				<ul class="user-menu menu">
-					<li class="user-menu-item"><a class="user-menu-link menu-link basket-link" href="#">Корзина</a></li>
+					<li class="user-menu-item menu-item"><a class="user-menu-link menu-link basket-link" href="#">Корзина</a></li>
 				</ul>
 			</nav>
 			<h1 class="header-title visually-hidden">Nёrds. Дизайн-студия из Краснодара.</h1>
@@ -100,7 +100,7 @@
 			<h2 class="visually-hidden">Наши преимущества</h2>
 
 			<div class="advantage-orders common-wrapper">
-				<h3 class="advantage-orders-title">Выполняем заказы на разработку:</h3>
+				<p class="advantage-orders-title">Выполняем заказы на разработку:</p>
 				<ul class="advantage-order-types">
 					<li class="advantage-order-type">Веб-сайтов любой сложности</li>
 					<li class="advantage-order-type">Мобильных приложений для iOS и Android</li>
@@ -150,15 +150,14 @@
 					</a>
 				</li>
 			</ul>
-			
+
 		</section>
 
 		<hr class="delimiter">
 
 		<section class="map">
 			<h2 class="visually-hidden">Наш адрес, контакты, форма обратной связи</h2>
-			
-			<div class="map-info-wrapper">
+			<div class="map-info-wrapper map-link" title="Для переключения между обычной и интерактивной картой - двойной щелчок мыши по карте над контентной областью. Перемещать и масштабировать интерактивную карту можно за пределами ширины контентной области (края карты). Кроме этого, можно открыть интерактивную карту в отдельном окне.">
 				<div class="map-info">
 					<h3 class="map-title">NЁRDS DESIGN STUDIO</h3>
 					<p class="map-address">191186, Санкт-Петербург, <br>ул. Б. Конюшенная, д. 19/8</p>
@@ -166,7 +165,8 @@
 					<a class="map-button btn btn-red" href="feedback.html">Напишите нам</a>
 				</div>		
 			</div>
-			<img class="map-image" src="img/map.jpg" width="1440" height="416" alt="Наш адрес на карте: 191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"> 
+			<img class="map-image map-link map-hide" src="img/map.jpg" width="1440" height="416"  id="id-map-img" alt="Наш адрес на карте: 191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+			<iframe  class="map-iframe map-link map-show" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" id="id-map-iframe" allowfullscreen></iframe>
 		</section>
 
 		<footer class="footer layout">

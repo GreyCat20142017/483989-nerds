@@ -1,3 +1,13 @@
+/*
+* { outline: 1px dotted red; }
+* * { outline: 1px dotted green; }
+* * * { outline: 1px dotted maroon; }
+* * * * { outline: 1px dotted blue; }
+* * * * * { outline: 1px dotted red; }
+* * * * * * { outline: 1px dotted green; }
+* * * * * * * { outline: 1px dotted brown; }
+* * * * * * * * { outline: 1px dotted blue; }
+*/
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
@@ -72,7 +82,7 @@ body {
   text-align: center;
   vertical-align: middle;
   text-decoration: none;
-  letter-spacing: 0.012em;
+  letter-spacing: 0.012em; /*PP*/
   text-transform: uppercase;
   word-wrap: break-word;
   border: none;
@@ -86,7 +96,7 @@ body {
 
 .btn:focus {
   /*на кнопках стандартный outline почти не виден, добавлена имитация*/
-  box-shadow: 0 0 3px 1px rgb(141, 165, 230);  
+  box-shadow: 0 0 3px 1px rgb(141, 165, 230);
 }
 
 .btn-red {
@@ -170,7 +180,6 @@ body {
   min-height: 576px;
   margin: 40px 40px 33px 0;
   padding: 0;
-  
 }
 
 .product::before {
@@ -182,10 +191,10 @@ body {
   left: 0;
   width: 360px;
   height: 40px;
-  /*border-top-left-radius: 10px;
-  border-top-right-radius: 10px;*/
-  background-color: rgb(255, 255, 255); /*можно было бы подложить фон для имитации цвета svg, если бы круги в svg были не прозрачные, а белые*/
-  background-image: url("../img/catalog/browser.svg");
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: rgb(255, 255, 255); /*фоновый "цвет" - вторым изображением*/
+  background-image: url("../img/catalog/browser.svg"), linear-gradient(to right, white 0, white 50px, rgb(77, 77, 77) 100%);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -222,6 +231,7 @@ body {
 
 .product-name {
   display: block;
+  max-width: 240px; /*Для IE*/
   margin: 0 0 12px;
   font-size: 18px;
   font-weight: 700;
@@ -229,13 +239,13 @@ body {
   vertical-align: baseline;
   text-decoration: none;
   text-transform: uppercase;
-  color: rgb(0, 0, 0);  
+  color: rgb(0, 0, 0);
 }
 
 .product-description {
-  overflow-y: auto; /*для предотвращения переполнения по методике, рекомендованной в примерах переполнения. Хотя у меня все растягивается, правда с искажением рисунка*/
-  max-height: 300px;
+  overflow-y: auto; /*для предотвращения переполнения по методике, рекомендованной в примерах переполнения. Но растягивается и весь контейнер, на всякий случай*/
   max-width: 240px; /*Для IE*/
+  max-height: 300px;
   margin: 0 0 26px;
   padding: 4px; /*чтобы в FireFox не появлялась полоса прокрутки в некоторых двухстрочных абзацах*/
   font-size: 16px;
@@ -273,18 +283,18 @@ body {
 .header {
   min-height: 545px;
   margin: 0;
-  padding: 20px 0 0;
+  padding: 19px 0 0;
   background-color: rgb(239, 239, 239);
 }
 
 .inner-header {
   margin: 0;
-  padding: 20px 0 30px;
+  padding: 19px 0 30px;
   background-color: rgb(239, 239, 239);
 }
 
 .header-title {
-  margin: 78px 0;
+  margin: 77px 0 78px;
   padding: 0;
   font-size: 55px;
   font-weight: 500;
@@ -295,17 +305,12 @@ body {
 .navigation {
   display: flex;
   justify-content: flex-start;
-  align-items: flex-end;
-  min-height: 94px;
-  margin-bottom: 1px;
+  align-items: flex-start;
+  margin-top: 30px;
 }
 
 .navigation-logo-img {
-  vertical-align: bottom;
-}
-
-.navigation-logo {
-  align-self: flex-end;
+  display: block;
 }
 
 .navigation-logo:hover,
@@ -322,15 +327,29 @@ body {
   align-items: flex-start;
   flex-wrap: wrap;
   margin: 0;
-  margin-bottom: 9px;
+  margin-top: 16px;
   padding: 0;
   list-style: none;
 }
 
 .common-menu {
   justify-content: flex-start;
-  width: 500px;
-  margin-left: 201px;
+  min-width: 440px; /*IE-PP*/
+  max-width: 444px; /*IE-PP*/
+  margin-left: 202px;
+  margin-right: 40px;
+}
+
+.menu-item {
+  padding: 10px 0;
+}
+
+.common-menu-item {
+  margin-left: 46px;
+}
+
+.common-menu-item:first-child {
+  margin-left: 0;
 }
 
 .menu-link {
@@ -341,21 +360,19 @@ body {
   text-align: right;
   vertical-align: top;
   text-decoration: none;
-  letter-spacing: 0.0047em;
+  letter-spacing: 0.0047em; /*PP*/
   text-transform: uppercase;
   color: rgb(0, 0, 0);
 }
 
-.common-menu-link {
-  margin-right: 46px;
-}
-
-.common-menu-item:last-child .menu-link {
-  margin-right: 0;
-}
-
 .user-menu {
   margin-left: auto;
+  max-width: 260px;
+  justify-content: flex-end;
+}
+
+.user-menu-item {
+  margin-left: 20px;
 }
 
 .basket-link {
@@ -444,7 +461,7 @@ body {
 
 .filter-button {
   min-width: 260px;
-  margin-top: 34px;
+  margin-top: 33px;
 }
 
 .range-labels {
@@ -583,7 +600,7 @@ body {
   content: "";
   position: absolute;
   z-index: 1;
-  top: 6px;  
+  top: 6px;
   width: 0;
   height: 0;
   border-right: 6px solid transparent;
@@ -605,7 +622,7 @@ body {
   opacity: 1;
 }
 
-.sorting-link:hover, 
+.sorting-link:hover,
 .sorting-link:focus {
   opacity: 0.6;
 }
@@ -683,6 +700,8 @@ body {
 
 .pagination {
   display: flex;
+  flex-wrap: wrap;
+  max-width: 1560px;
   margin: 0;
   margin-top: 27px;
   padding: 0;
@@ -691,11 +710,12 @@ body {
 
 .pagination li {
   margin-right: 11px;
+  margin-bottom: 9px;
 }
 
 .pagination-link {
   min-width: 50px;
-  min-height: 50px; 
+  min-height: 50px;
 }
 
 .pagination-link.next {
@@ -703,17 +723,17 @@ body {
 }
 
 .pagination-link.current {
-  padding: 14px 14px 13px;
+  padding: 13px 14px 13px;
+  cursor: default;
   border: 3px solid rgba(0, 0, 0, 0.1);
   color: rgb(0, 0, 0);
   background-color: rgb(255, 255, 255);
   box-shadow: none;
-  cursor: default;
 }
 
 .categories {
   margin-top: 80px;
-  margin-bottom: 65px;
+  margin-bottom: 66px;
 }
 
 .categories-list {
@@ -725,23 +745,23 @@ body {
 }
 
 .category {
+  position: relative;
   width: 360px;
   margin-right: 40px;
-  padding-right: 60px;
   padding-top: 146px;
-  position: relative;
+  padding-right: 60px;
 }
 
 .category::before {
   content: "";
   position: absolute;
-  width: 300px;
-  height: 146px; 
-  left: 0;
   top: 0;
+  left: 0;
+  width: 300px;
+  height: 146px;
+  background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .category:nth-child(3n) {
@@ -782,7 +802,7 @@ body {
 .category-button {
   min-width: 160px;
   margin: 14px 0;
-  padding: 17px 38px;
+  padding: 18px 18px 15px;
 }
 
 .promo {
@@ -813,7 +833,7 @@ body {
   padding: 0;
   font-size: 16px;
   line-height: 24px;
-  letter-spacing: 0.0053em;
+  letter-spacing: 0.0053em; /*PP*/
 }
 
 .promo-image {
@@ -865,7 +885,7 @@ body {
 
 .advantage-details th {
   width: 120px;
-  padding: 6px 2px 6px 0;
+  padding: 5px 5px 5px 0;
   font-size: 16px;
   font-weight: 400;
   line-height: 18px;
@@ -996,23 +1016,44 @@ body {
 }
 
 .map-inner-page {
-  margin-top: 59px;
+  margin-top: 51px;
 }
 
-.map-image {
+.map-image,
+.map-iframe {
   position: absolute;
   z-index: 1;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  width: 100%;
-  /* убрать этот блок - если изображение статичной карты должно растягиваться до размеров вьюпорта*/
+  height: 100%;
+  border: none;
+  background-color: rgb(213, 213, 213);
+}
+
+.map-image {
+  /*width: 100%;*/
+  /* убрать этот блок - если изображение статичной карты должно все-таки растягиваться до размеров вьюпорта*/
   max-width: 1440px;
   margin: 0 auto;
   /* убрать этот блок - конец*/
-  height: 100%;
-  background-color: rgb(213, 213, 213);
+}
+
+.map-iframe {
+  width: 100%;
+}
+
+.map-hide {
+  display: none;
+}
+
+.map-show {
+  display: block;
+}
+
+.map-link {
+  cursor: pointer;
 }
 
 .map-info-wrapper {
@@ -1029,7 +1070,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 320px;
+  width: 319px;
   min-height: 308px;
   padding: 50px 50px 47px;
   color: rgb(0, 0, 0);
@@ -1051,7 +1092,7 @@ body {
   font-size: 16px;
   line-height: 18px;
   text-align: left;
-  letter-spacing: 0.007em;
+  letter-spacing: 0.007em; /*PP*/
   color: rgb(102, 102, 102);
 }
 
@@ -1059,11 +1100,12 @@ body {
   font-size: 16px;
   line-height: 18px;
   text-decoration: none;
+  letter-spacing: 0.007em; /*PP*/
   color: rgb(102, 102, 102);
 }
 
 .map-button {
-  min-width: 220px;
+  min-width: 219px;
   margin: 36px auto 0;
 }
 
@@ -1142,7 +1184,7 @@ body {
   font-weight: 700;
   line-height: 36px;
   text-align: left;
-  letter-spacing: 0.007em;
+  letter-spacing: 0.007em; /*PP*/
 }
 
 .footer-text {
@@ -1263,8 +1305,8 @@ body {
   font-size: 16px;
   line-height: 18px;
   border-width: 2px;
-  border-color:  rgba(215, 220, 222, 1);
   border-style: solid;
+  border-color: rgba(215, 220, 222, 1);
   color: rgba(68, 68, 68, 0.5);
 }
 
@@ -1276,17 +1318,17 @@ body {
 
 .form-input:focus,
 .form-textarea:focus {
-  border-color: rgb(0, 0, 0); 
-  color: rgb(0, 0, 0);
+  border-color: rgb(0, 0, 0);
   outline: none;
+  color: rgb(0, 0, 0);
   box-shadow: none;
 }
 
 .form-input:invalid,
 .form-textarea:invalid {
   border-color: rgb(231, 66, 70);
-  color: rgb(231, 66, 70);
   outline: none;
+  color: rgb(231, 66, 70);
   box-shadow: none;
 }
 
@@ -1329,33 +1371,26 @@ body {
 
 .form-input:invalid::-ms-input-placeholder,
 .form-textarea:invalid::-ms-input-placeholder {
-    color: rgb(231, 66, 70);
+  color: rgb(231, 66, 70);
 }
 
 .form-input:invalid::placeholder,
 .form-textarea:invalid::placeholder {
-    color: rgb(231, 66, 70);
+  color: rgb(231, 66, 70);
 }
 
 
 .form-input:required,
 .form-textarea:required {
-    border-width: 2px;
+  border-width: 2px;
 }
-
-
-
-
-
-
-
 
 .form-feedback-button {
   min-width: 260px;
   margin-top: 47px;
 }
 
-.slider {
+..slider {
   position: relative;
 }
 
@@ -1370,8 +1405,8 @@ body {
   flex-direction: column;
   min-height: 430px;
   padding: 77px 0 80px;
-  background-repeat: no-repeat;
   background-color: rgb(239, 239, 239);
+  background-repeat: no-repeat;
 }
 
 
@@ -1411,13 +1446,16 @@ body {
 .slide-button {
   align-self: flex-start;
   min-width: 240px;
+  max-width: 430px;
 }
 
 .slider-controls {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 94px;
+  bottom: 77px;
+  display: flex;
+  justify-content: space-between;
   width: 88px;
   margin: 0 auto;
 }
@@ -1428,7 +1466,6 @@ body {
   width: 18px;
   height: 18px;
   margin: 0;
-  margin-right: 13px;
   padding: 0;
   cursor: pointer;
   vertical-align: middle;
@@ -1440,9 +1477,17 @@ body {
   margin-right: 0;
 }
 
+//*стили для контролов слайдера не прописаны, поэтому просто лишь бы было...*/
 .slider-button:focus,
 .slider-button:hover {
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+.slider-radio:nth-of-type(1):disabled ~ .slider-controls > .slider-button-1,
+.slider-radio:nth-of-type(2):disabled ~ .slider-controls > .slider-button-2,
+.slider-radio:nth-of-type(3):disabled ~ .slider-controls > .slider-button-3 {
+  background-color: rgba(200, 200, 255, 0.5);
+  cursor: default;
 }
 
 .slider-radio:nth-of-type(1):checked ~ .slider-controls .slider-button-1::before,

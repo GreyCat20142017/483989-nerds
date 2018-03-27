@@ -5,12 +5,27 @@ function isLocalStorageAvailable() {
 		return false;
 	}
 }
+/* ---------- карта ------------------------------------- */
+var mapIFrame = document.getElementById("id-map-iframe");
+var mapImg = document.getElementById("id-map-img");
+var mapLink = document.querySelector(".map-link");
 
-var mapImg = document.querySelector('.map-image');
+if (!(mapLink === null) && !(mapIFrame === null)  && !(mapImg === null))  {
+	mapLink.onselectstart = function(e) {
+		e.preventDefault();
+	}		
+	mapLink.addEventListener("dblclick", function (e) {	
+		e.preventDefault();	    	
+		mapIFrame.classList.toggle("map-hide");
+		mapIFrame.classList.toggle("map-show");
+		mapImg.classList.toggle("map-hide");
+		mapImg.classList.toggle("map-show");
+	});
+}
 
-var feedbackLink = document.querySelector('.map-button');
+/* ---------- форма обратной связи----------------------- */
 var feedbackForm = document.getElementById('id-form-feedback');
-
+var feedbackLink = document.querySelector('.map-button');
 
 function clearClasses(feedbackForm) {
 	var classArr = ['flex-show', 'effect', 'error'];
@@ -29,7 +44,6 @@ function clearFields(feedbackForm) {
 		feedbackForm[fieldArr[i]].value = '';
 	}	 
 }
-
 
 if (!(feedbackLink === null) && !(feedbackForm === null))  {
 
@@ -68,14 +82,13 @@ if (!(feedbackLink === null) && !(feedbackForm === null))  {
 					feedbackForm[fieldArr[i]].focus();
 				}
 			} 
-			
+
 		} else { 				
 			if (isLocalStorageAvailable()) {				
 				localStorage.setItem('nerds-name', feedbackForm['id-feedback-name'].value);				
 				localStorage.setItem('nerds-email', feedbackForm['id-feedback-email'].value);							
 			} 
-		}
-		// clearClassesAndFields(feedbackForm);
+		}	
 	}
 	);	 
 
