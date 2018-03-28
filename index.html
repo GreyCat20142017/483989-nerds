@@ -3,9 +3,9 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Nёrds. Дизайн-студия из Краснодара</title>
-		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
-		<link rel="stylesheet" href="css/normalize.css">
-		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic">
+		<link rel="stylesheet" href="css/normalize-min.css">
+		<link rel="stylesheet" href="css/style-min.css">
 	</head>
 
 	<body>
@@ -42,17 +42,17 @@
 					<li class="slide slide-1">			
 						<h3 class="slide-title">Долго, дорого,  скрупулезно.</h3>
 						<p class="slide-text">Математически выверенный дизайн <br>  для вашего сайта или мобильного приложения</p>
-						<a class="slide-button btn btn-red" href="#">Узнать больше</a>			
+						<a class="slide-button btn btn-red" href="#" title="Получить подробную информацию">Узнать больше</a>			
 					</li>
 					<li class="slide slide-2">			
 						<h3 class="slide-title">Любим математику как никто другой</h3>
 						<p class="slide-text">Никакого креатива, только математические формулы  для расчета идеальных пропорций</p>
-						<a class="slide-button btn btn-red" href="#">Узнать больше</a>			
+						<a class="slide-button btn btn-red" href="#" title="Получить подробную информацию">Узнать больше</a>			
 					</li>
 					<li class="slide slide-3">			
 						<h3 class="slide-title">Только ночь, только хардкор</h3>
 						<p class="slide-text">Работать днем, как все? Мы против этого. <br> Ближе к полуночи работа только начинается</p>
-						<a class="slide-button btn btn-red" href="#">Узнать больше</a>			
+						<a class="slide-button btn btn-red" href="#" title="Получить подробную информацию">Узнать больше</a>			
 					</li>
 				</ul>				
 			</section>
@@ -80,52 +80,53 @@
 			</ul>
 		</section>	
 
+		<!-- В интернете есть мнение, что hr - это ну о-о-чень семантично... Поэтому hr. -->
 		<hr class="delimiter">
 
 		<section class="promo layout">
 			<h2 class="visually-hidden">Рекламная информация о компании</h2>
-
-			<div class="common-wrapper">
-				<h3 class="promo-title">Мы — маленькая, но гордая дизайн-студия из Краснодара.</h3>
-				<p class="promo-text">Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
-			</div>
-			<!-- Похоже на вариант логотипа. Поэтому так... -->
-			<a class="promo-logo" href="studio.html" title="Перейти на страницу СТУДИЯ">
-				<img class="promo-image" src="img/nerds-illustration.jpg" width="360" height="208" alt="Nёrds" title="Подробнее о студии Nёrds">			
-			</a>
-		</section>	
-
-
-		<section class="advantage layout">
-			<h2 class="visually-hidden">Наши преимущества</h2>
-
-			<div class="advantage-orders common-wrapper">
-				<p class="advantage-orders-title">Выполняем заказы на разработку:</p>
-				<ul class="advantage-order-types">
-					<li class="advantage-order-type">Веб-сайтов любой сложности</li>
-					<li class="advantage-order-type">Мобильных приложений для iOS и Android</li>
-					<li class="advantage-order-type">Слайдшоу и видео для корпоративных презентаций</li>
-				</ul>
+			<div class="common-wrapper-horizontal">
+				<div class="common-wrapper">
+					<h3 class="promo-title">Мы — маленькая, но гордая дизайн-студия из Краснодара.</h3>
+					<p class="promo-text">Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
+				</div>
+				<!-- Похоже на вариант логотипа. Поэтому так... -->
+				<a class="promo-logo" href="studio.html" title="Перейти на страницу СТУДИЯ">
+					<img class="promo-image" src="img/nerds-promo.png" width="360" height="208" alt="Nёrds" title="Подробнее о студии Nёrds">			
+				</a>
 			</div>
 
-			<table class="advantage-details">
-				<caption class="advantage-details-title">С 2004 года любим точность во всем:</caption>
-				<tr>
-					<td>146<sup>%</sup></td>
-					<td>100<sup>%</sup></td>
-					<td>50<sup>%</sup></td>
-				</tr>	
-				<tr>
-					<th>Уровень самоотдачи</th>
-					<th>Соблюдение сроков</th>
-					<th>Минимальная предоплата</th>
-				</tr>
-			</table>
+			<section class="advantage">
+				<h3 class="visually-hidden">Наши преимущества</h3>
 
+				<div class="advantage-orders common-wrapper">
+					<b class="advantage-orders-title">Выполняем заказы на разработку:</b>
+					<ul class="advantage-order-types">
+						<li class="advantage-order-type">Веб-сайтов любой сложности</li>
+						<li class="advantage-order-type">Мобильных приложений для iOS и Android</li>
+						<li class="advantage-order-type">Слайдшоу и видео для корпоративных презентаций</li>
+					</ul>
+				</div>
+
+				<table class="advantage-details">
+					<caption class="advantage-details-title">С 2004 года любим точность во всем:</caption>
+					<tr>
+						<td>146<sup>%</sup></td>
+						<td>100<sup>%</sup></td>
+						<td>50<sup>%</sup></td>
+					</tr>	
+					<tr>
+						<th>Уровень самоотдачи</th>
+						<th>Соблюдение сроков</th>
+						<th>Минимальная предоплата</th>
+					</tr>
+				</table>
+			</section>				
 		</section>	
 
 		<hr class="delimiter">
 
+		<!-- Два логотипа в образце выровнены не по центру: 1 и 4.  Экспортированы с пустым пространством под нужный размер.	 -->
 		<section class="brands layout">
 			<h2 class="visually-hidden">Лучшие проекты студии Nёrds</h2>
 			<ul class="brand-items">
@@ -141,7 +142,7 @@
 				</li>
 				<li class="brand-item">
 					<a class="brand-link" href="#" title="PINK">
-						<img class="brand-img" src="img/brand/logo-3.png" width="260" height="180" alt="PINK">
+						<img class="brand-img" src="img/brand/logo-3.png" width="185" height="52" alt="PINK">
 					</a>
 				</li>
 				<li class="brand-item">
@@ -162,46 +163,48 @@
 					<h3 class="map-title">NЁRDS DESIGN STUDIO</h3>
 					<p class="map-address">191186, Санкт-Петербург, <br>ул. Б. Конюшенная, д. 19/8</p>
 					<a class="map-phone" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
-					<a class="map-button btn btn-red" href="feedback.html">Напишите нам</a>
+					<a class="map-button btn btn-red" href="feedback.html" title="Форма обратной связи">Напишите нам</a>
 				</div>		
 			</div>
-			<img class="map-image map-link map-hide" src="img/map.jpg" width="1440" height="416"  id="id-map-img" alt="Наш адрес на карте: 191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
-			<iframe  class="map-iframe map-link map-show" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" id="id-map-iframe" allowfullscreen></iframe>
-		</section>
+	<!-- 	По ТЗ карта должна растягиваться, но в базовых есть еще Perfect Pixel. Поэтому растягивается интерактивная, а для РР оставлен вариант статичной на 1440px
+		Переключаются по двойному клику. И, наверное, лучше начинать с картинки, ибо интерактивная может и не понадобиться вовсе, но...-->
+		<img class="map-image map-link map-hide" src="img/map.jpg" width="1440" height="416"  id="id-map-img" alt="Наш адрес на карте: 191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+		<iframe  class="map-iframe map-link map-show" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" id="id-map-iframe" allowfullscreen></iframe>
+	</section>
 
-		<footer class="footer layout">
-			<h2 class="visually-hidden">Студия Nёrds в соцсетях</h2>
-			<ul class="footer-social">
-				<li><a class="social-link social-link-vk" href="#" title="В контакте"><span class="visually-hidden">В контакте</span></a></li>					
-				<li><a class="social-link social-link-fb" href="#" title="Facebook"><span class="visually-hidden">Facebook</span></a></li>
-				<li><a class="social-link social-link-in" href="#" title="Instagram"><span class="visually-hidden">Instagram</span></a></li>							
-			</ul>				
-			<div class="common-wrapper">
-				<b class="footer-slogan">Давайте дружить, это выгодно!</b>
-				<p class="footer-text">Скидка 10% для друзей из социальных сетей.</p>
-			</div>	
-		</footer>
+	<footer class="footer layout">
+		<h2 class="visually-hidden">Студия Nёrds в соцсетях</h2>
+		<ul class="footer-social">
+			<li><a class="social-link social-link-vk" href="#" title="В контакте"><span class="visually-hidden">В контакте</span></a></li>					
+			<li><a class="social-link social-link-fb" href="#" title="Facebook"><span class="visually-hidden">Facebook</span></a></li>
+			<li><a class="social-link social-link-in" href="#" title="Instagram"><span class="visually-hidden">Instagram</span></a></li>							
+		</ul>				
+		<div class="common-wrapper">
+			<b class="footer-slogan">Давайте дружить, это выгодно!</b>
+			<p class="footer-text">Скидка 10% для друзей из социальных сетей.</p>
+		</div>	
+	</footer>
 
-		<form class="form-feedback flex-hide" id="id-form-feedback" method="post" action="https://echo.htmlacademy.ru"> 
-			<h2 class="form-feedback-title">Напишите нам</h2>
-			<button class="feedback-close" type="button" name="close-button" id="id-feedback-close" title="Закрыть форму обратной связи">
-				<span class="visually-hidden">Закрыть</span>
-			</button>
-			<div class="form-field">
-				<label class="form-label" for="id-feedback-name">Ваше имя:</label>
-				<input class="form-input" type="text" id="id-feedback-name" name="feedback-name" placeholder="Имя Фамилия" title="Введите Ваши имя и фамилию">
-			</div>
-			<div class="form-field">
-				<label class="form-label" for="id-feedback-email">Ваш e-mail:</label>
-				<input class="form-input" type="email" id="id-feedback-email" name="feedback-email" placeholder="email@example.com" title="Введите адрес электронной почты">		
-			</div>
-			<div class="form-field">
-				<label class="form-label" for="id-feedback-text">Текст письма:</label>
-				<textarea class="form-textarea" id="id-feedback-text" name="feedback-text" placeholder="В свободной форме" title="Введите текст Вашего сообщения"></textarea>
-			</div>
-			<button class="form-feedback-button btn btn-red" type="submit" title="Отправить сообщение">Отправить</button>
-		</form>
+	<form class="form-feedback flex-hide" id="id-form-feedback" method="post" action="https://echo.htmlacademy.ru"> 
+		<h2 class="form-feedback-title">Напишите нам</h2>
+		<button class="feedback-close" type="button" name="close-button" id="id-feedback-close" title="Закрыть форму обратной связи">
+			<span class="visually-hidden">Закрыть</span>
+		</button>
+		<div class="form-field">
+			<label class="form-label" for="id-feedback-name">Ваше имя:</label>
+			<input class="form-input" type="text" id="id-feedback-name" name="feedback-name" placeholder="Имя Фамилия" title="Введите Ваши имя и фамилию">
+		</div>
+		<div class="form-field">
+			<label class="form-label" for="id-feedback-email">Ваш e-mail:</label>
+			<input class="form-input" type="email" id="id-feedback-email" name="feedback-email" placeholder="email@example.com" title="Введите адрес электронной почты">		
+		</div>
+		<div class="form-field">
+			<label class="form-label" for="id-feedback-text">Текст письма:</label>
+			<textarea class="form-textarea" id="id-feedback-text" name="feedback-text" placeholder="В свободной форме" title="Введите текст Вашего сообщения"></textarea>
+		</div>
+		<button class="form-feedback-button btn btn-red" type="submit" title="Отправить сообщение">Отправить</button>
+	</form>
 
-		<script src="js/script.js"></script>
+	<script src="js/script-min.js"></script>
 	</body>
 </html>

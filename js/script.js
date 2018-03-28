@@ -5,21 +5,28 @@ function isLocalStorageAvailable() {
 		return false;
 	}
 }
+
+function viewProduct(e, nameProduct) {
+	e.preventDefault();
+	alert('Заглушка. Здесь мог бы быть вызов модального окна '+nameProduct);
+}
+
+
 /* ---------- карта ------------------------------------- */
-var mapIFrame = document.getElementById("id-map-iframe");
-var mapImg = document.getElementById("id-map-img");
-var mapLink = document.querySelector(".map-link");
+var mapIFrame = document.getElementById('id-map-iframe');
+var mapImg = document.getElementById('id-map-img');
+var mapLink = document.querySelector('.map-link');
 
 if (!(mapLink === null) && !(mapIFrame === null)  && !(mapImg === null))  {
 	mapLink.onselectstart = function(e) {
 		e.preventDefault();
 	}		
-	mapLink.addEventListener("dblclick", function (e) {	
+	mapLink.addEventListener('dblclick', function (e) {	
 		e.preventDefault();	    	
-		mapIFrame.classList.toggle("map-hide");
-		mapIFrame.classList.toggle("map-show");
-		mapImg.classList.toggle("map-hide");
-		mapImg.classList.toggle("map-show");
+		mapIFrame.classList.toggle('map-hide');
+		mapIFrame.classList.toggle('map-show');
+		mapImg.classList.toggle('map-hide');
+		mapImg.classList.toggle('map-show');
 	});
 }
 
@@ -112,8 +119,7 @@ if (!(feedbackLink === null) && !(feedbackForm === null))  {
 		} 
 		else { 
 			feedbackForm['id-feedback-name'].focus();	
-		}
-		
+		}		
 	});
-
+	
 }
